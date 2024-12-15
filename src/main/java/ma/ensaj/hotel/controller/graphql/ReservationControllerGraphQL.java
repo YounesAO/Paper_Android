@@ -1,4 +1,4 @@
-package ma.ensaj.hotel.controller;
+package ma.ensaj.hotel.controller.graphql;
 
 import lombok.AllArgsConstructor;
 import ma.ensaj.hotel.entity.Chambre;

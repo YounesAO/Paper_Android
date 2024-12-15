@@ -1,4 +1,4 @@
-package ma.ensaj.hotel.controller;
+package ma.ensaj.hotel.controller.grpc;
 
 import io.grpc.stub.StreamObserver;
 import ma.ensaj.hotel.repository.ChambreRepository;
@@ -13,7 +13,7 @@ import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @GrpcService
-public class ReservationServiceImpl extends ReservationServiceGrpc.ReservationServiceImplBase {
+public class ReservationServiceGrpcImpl extends ReservationServiceGrpc.ReservationServiceImplBase {
     @Autowired
     private  ReservationService reservationService;
     @Autowired
