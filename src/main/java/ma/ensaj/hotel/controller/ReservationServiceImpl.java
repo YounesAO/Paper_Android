@@ -10,19 +10,17 @@ import ma.ensaj.hotel.entity.Client;
 import ma.ensaj.hotel.entity.Chambre;
 import ma.ensaj.hotel.entity.Reservation;
 import net.devh.boot.grpc.server.service.GrpcService;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @GrpcService
 public class ReservationServiceImpl extends ReservationServiceGrpc.ReservationServiceImplBase {
+    @Autowired
+    private  ReservationService reservationService;
+    @Autowired
+    private  ChambreRepository chambreRepository;
+    @Autowired
+    private  ClientRepository clientRepository;
 
-    private final ReservationService reservationService;
-    private final ChambreRepository chambreRepository;
-    private final ClientRepository clientRepository;
-
-    public ReservationServiceImpl(ReservationService reservationService, ChambreRepository chambreRepository, ClientRepository clientRepository) {
-        this.reservationService = reservationService;
-        this.chambreRepository = chambreRepository;
-        this.clientRepository = clientRepository;
-    }
 
     @Override
     public void createReservation(ReservationProto.CreateReservationRequest request,

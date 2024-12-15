@@ -65,6 +65,7 @@ public class Reservation {
         return client;
     }
 
+
     public void setClient(Client client) {
         this.client = client;
     }
@@ -75,5 +76,9 @@ public class Reservation {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getClientId() {
+        return client.getId();
     }
 }

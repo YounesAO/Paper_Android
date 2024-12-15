@@ -10,7 +10,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@NoArgsConstructor
 public class Chambre {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
